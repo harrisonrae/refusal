@@ -38,15 +38,15 @@
             height: 100%;
             background: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
-            display: flex;
+            display: center;
             align-items: center;
             justify-content: center;
             font-size: 14px;
             text-align: center;
             padding: 10px;
-            box-sizing: content-box;
+            box-sizing: border-box;
             display: none; /* Initially hidden */
-            z-index: 10; /* Ensures text box is above everything else */
+            z-index: 100; /* Ensures text box is above everything else */
             cursor: pointer;
             flex-direction: column;
             
@@ -206,7 +206,7 @@ The fugitive attempts to live unbound by the oppressive conditions forced upon t
 </div>
 
 <div class="image-container" >
-    <img src="../docs/images/michel de certeau.png" alt="Image 11" class="image" onclick="toggleTextBox(this)">
+    <img src="images/michel de certeau.png" alt="Image 11" class="image" onclick="toggleTextBox(this)">
     <div class="text-box">       
         Last year I wrote about primitive hypertext as a methodology for 'creative resistance'.
            
