@@ -19,13 +19,14 @@
 
         .image-container {
             position: absolute;
-            width: fit-content;
-            height: fit-content;
+            width: max-content;
+            height: max-content;
+            padding-left: 50px;
         }
 
         .image {
-            width: 20%;
-            height: 20%;
+            width: 50%;
+            height: 50%;
             object-fit: contain;
             cursor: pointer;
         }
@@ -36,8 +37,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             display: center;
             align-items: center;
             justify-content: center;
@@ -49,12 +50,42 @@
             z-index: 100; /* Ensures text box is above everything else */
             cursor: pointer;
             flex-direction: column;
+           
             
             
         }
 
+        .text-box p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
         .hidden {
             display: none !important;
+        }
+
+      
+
+        /* Final text box styling */
+        #final-text-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(237, 237, 237, 0.95);
+            color: rgb(0, 0, 0);
+            display: none; /* Hidden initially */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+            z-index: 3000; /* Ensure it appears above all other elements */
+            overflow-y: auto;
+            cursor: crosshair;
         }
     </style>
 </head>
@@ -229,6 +260,31 @@ The fugitive attempts to live unbound by the oppressive conditions forced upon t
 </div>
 </div>
 
+
+   <!-- Final Text Box -->
+   <div id="final-text-box" onclick="hideFinalTextBox()">
+    Astrid Lorange asked what I'm writing about, and I told her about the oat milk thing.
+           
+    What I arrived at in that moment is how differentiating myself and this oat milks use of fugitivity is key to figuring out what I want to talk about.
+               
+    The difference simply is that one is an appeal to the aesthetics of fugitivity and criminality, and the other is an attempt to imagine how we use fugitivity as a means to resist the Foucauldian State that serves to discipline and punish us.
+   
+    I ask myself now: "is that really what I'm talking about?" In my mind there was an idealism in what I was talking about.
+   
+    I return to Moten, whose radical black politics is about subversion and survival. There is an idealism there about the imagined potentialities of improvised creativity, untethered and unbound.
+         
+    I return to de Certeau whose text illustrates how deeply we exist in a world we have no control over where institutions or those in power organize and control space, knowledge, and behaviors.
+   
+    Though there is an outlining of how everyday practices—such as walking in the city, cooking, or storytelling—as means by which people personalize and resist the imposed structures while experiencing the joy of spontaneity.
+   
+    These activities don’t confront power directly but instead reappropriate and reconfigure spaces and practices in subtle ways.
+             
+                           
+    I’m asking myself to consider how fugitivity as an embodied practice of refusing legibility can make me feel untethered. How does one even imagine what it feels to feel it?
+        <p>
+            To be unbound, to be infinite, to be illegible.
+   </div>
+
 <script src="script.js"></script>
 
 
@@ -264,6 +320,9 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+
+ 
 
 // Function to randomize the order of image containers
 function randomizeImageOrder() {
@@ -306,12 +365,20 @@ function toggleTextBox(imageElement) {
 }
 
 
+// Set the z-index of the text box to be on top of all other elements
+zIndexCounter++; // Increment the counter to ensure each clicked text box is on top
+    textBox.style.zIndex = zIndexCounter;
+
+     // Show the text box initially
+     textBox.style.display = 'flex';
+
+
     window.onload = positionImagesRandomly;
 
     // Show the text box and hide other images
     function showTextBox(imageElement) {
         const textBox = imageElement.nextElementSibling;
-        textBox.style.display = 'cover';
+        textBox.style.display = 'flex';
 
         // Hide all other images by adding a hidden class to all image containers
         document.querySelectorAll('.image-container').forEach(container => {
@@ -331,6 +398,47 @@ function toggleTextBox(imageElement) {
             container.classList.remove('hidden');
         });
     }
+
+
+
+    function toggleTextBox(imageElement) {
+    const container = imageElement.parentElement; // Get the parent container
+    const textBox = imageElement.nextElementSibling; // Get the text box
+
+    // Set the z-index of the text box to be on top of all other elements
+    zIndexCounter++; // Increment the counter to ensure each clicked text box is on top
+    textBox.style.zIndex = zIndexCounter;
+
+    // Show the text box initially
+    textBox.style.display = 'flex';
+
+    // Add an event listener to the text box to hide the entire container on click
+    textBox.addEventListener('click', () => {
+        container.style.display = 'none'; // Hides the whole container
+        checkAllImagesHidden(); // Check if all images are hidden
+    });
+}
+
+
+
+
+
+// Function to check if all images are hidden
+function checkAllImagesHidden() {
+    const imageContainers = document.querySelectorAll('.image-container');
+    const allHidden = Array.from(imageContainers).every(container => container.style.display === 'none');
+
+    if (allHidden) {
+        showFinalTextBox(); // Show final text box directly
+    }
+}
+
+// Show the final text box
+function showFinalTextBox() {
+    document.getElementById('final-text-box').style.display = 'flex';
+}
+
+
     
 </script>
 </body>
