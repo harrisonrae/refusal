@@ -22,7 +22,10 @@
             width: max-content;
             height: max-content;
             padding-left: 50px;
-        }
+           
+    margin: 20px; /* Add a margin to create space */
+}
+        
 
         .image {
             width: 50%;
@@ -86,6 +89,16 @@
             z-index: 3000; /* Ensure it appears above all other elements */
             overflow-y: auto;
             cursor: crosshair;
+        }
+          /* Responsive Design */
+          @media (max-width: 768px) {
+            .image {
+                width: 70vw; /* Wider on small screens */
+            }
+            .text-box, #final-text-box {
+                font-size: 14px; /* Smaller text */
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -280,7 +293,7 @@ The fugitive attempts to live unbound by the oppressive conditions forced upon t
     These activities don’t confront power directly but instead reappropriate and reconfigure spaces and practices in subtle ways.
              
                            
-    I’m asking myself to consider how fugitivity as an embodied practice of refusing legibility can make me feel untethered. How does one even imagine what it feels to feel it?
+    I’m asking myself to consider how fugitivity as an embodied practice of refusing legibility can make me feel untethered. How does one even imagine what it feels to feel that?
         <p>
             To be unbound, to be infinite, to be illegible.
    </div>
@@ -421,7 +434,46 @@ zIndexCounter++; // Increment the counter to ensure each clicked text box is on 
 
 
 
+ // Function to check if two elements are close
+    function areElementsClose(el1, el2) {
+        const rect1 = el1.getBoundingClientRect();
+        const rect2 = el2.getBoundingClientRect();
 
+        const dx = rect1.left - rect2.left;
+        const dy = rect1.top - rect2.top;
+
+        return Math.sqrt(dx * dx + dy * dy) < minDistance;
+    }
+
+    imageContainers.forEach((container, index) => {
+        let positioned = false;
+
+        while (!positioned) {
+            // Randomize position within the viewport
+            const maxX = window.innerWidth - container.offsetWidth;
+            const maxY = window.innerHeight - container.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            container.style.left = `${randomX}px`;
+            container.style.top = `${randomY}px`;
+
+            // Check if it's too close to any other images
+            let isFarEnough = true;
+            for (let i = 0; i < index; i++) {
+                if (areElementsClose(container, imageContainers[i])) {
+                    isFarEnough = false;
+                    break;
+                }
+            }
+
+            // Only exit the loop if the position is far enough from other images
+            if (isFarEnough) {
+                positioned = true;
+            }
+        }
+    });
 
 // Function to check if all images are hidden
 function checkAllImagesHidden() {
