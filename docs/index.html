@@ -10,22 +10,24 @@
             margin: 0;
             padding: 0;
             height: 100vh;
+            width: 100vh;
             overflow: hidden;
             position: relative;
             display: flex;
             flex-wrap: wrap;
-        }
+}
+        
 
         .image-container {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: fit-content;
+            height: fit-content;
         }
 
         .image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
             cursor: pointer;
         }
 
@@ -50,8 +52,10 @@
 </head>
 <body>
 
+
+
     <!-- Image Containers with Text Boxes -->
-    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
+    <div class="image-container" >
         <img src="../docs/images/snoee.png" alt="image 1" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">   
              2021: Next to a car park in Parra I watched Snoee Badman — the first Australian to release an EP from inside a maximum-security prison.
@@ -60,9 +64,10 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
             Releasing a tape from behind bars felt like it resonated with parts of what Moten wrote, as well as a "fuck you" to the gaol system. I was eager to join in this, in this safe kind of contradictory implicit and explicit way in the Erby Street Car Park.
             Connected together in some kind of moment of alterity, as performer and listener.
 </div>
+    </div>
 
-    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
-        <img src="docs/images/busby.png" alt="Image 2" class="image" onclick="toggleTextBox(this)">
+    <div class="image-container" >
+        <img src="../docs/images/busby.png" alt="Image 2" class="image" onclick="toggleTextBox(this)">
         <div class="text-box"> 
             
             Midway through 2024 I showed a sculptural work in a gallery.
@@ -81,10 +86,10 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
                 In saying this, an image of the sandstone cairn standing in the gallery reminds me to be mindful of what I make legible and illegible.
  </p>
 </div>
- 
+ </div>
 
-    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
-        <img src="docs/images/guzman.png" alt="Image 3" class="image" onclick="toggleTextBox(this)">
+    <div class="image-container" >
+        <img src="../docs/images/guzman.png" alt="Image 3" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">     
             On the 426 up Marrickville Road the lane heading towards Sydenham Station is closed.
             Police and paramedics are outside Guzman y Gomez and the bus continues toward Dulwich Hill. </p>
@@ -92,10 +97,10 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
             I overhear that the police operation was because around 7:40pm last night-a Monday night-a man was killed in front of his family having dinner at GYG.
             The man who allegedly stabbed him was Snoee Badman.
         </div>
+</div>
 
-
-    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
-        <img src="docs/images/caofei.png" alt="Image 4" class="image" onclick="toggleTextBox(this)">
+    <div class="image-container">
+        <img src="../docs/images/caofei.png" alt="Image 4" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">   
             
             Recently under a blog titled 'refusal', my friend posted a Cao Fei short film.
@@ -112,10 +117,10 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
           <p>  Naively, I imagine how I would reconcile the world and human nature, thinking the answer was in range.
             I understand from the text I copied that if human nature is the pursuit of freedom, then the world is the force that prevents it.
  </div>
-   
+   </div>
 
-    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
-        <img src="docs/images/oat dealer.png" alt="Image 5" class="image" onclick="toggleTextBox(this)">
+    <div class="image-container" >
+        <img src="../docs/images/oat dealer.png" alt="Image 5" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">
             September 21st, an alternative milk company advertises their brand with pasteups. The images are mugshots; the text states “oat dealer”...
             There is something so surface-level about adopting this aesthetic to advertise oat milk. To perform alterity.
@@ -136,39 +141,137 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
             I'm no longer sure how to differentiate how an oat milk brand and I engage with fugitivity.
 
 </div>
- 
+ </div>
 
-    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
-        <img src="https://via.placeholder.com/100" alt="Image 6" class="image" onclick="toggleTextBox(this)">
-        <div class="text-box">Text for Image 6</div>
-    </div>
-
-    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
-        <img src="https://via.placeholder.com/100" alt="Image 7" class="image" onclick="toggleTextBox(this)">
-        <div class="text-box">Text for Image 7</div>
-    </div>
-
-    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
-        <img src="docs/images/guzman.png" alt="Image 8" class="image" onclick="toggleTextBox(this)">
-        <div class="text-box">Text for Image 8</div>
-    </div>
-
-    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
-        <img src="https://via.placeholder.com/100" alt="Image 9" class="image" onclick="toggleTextBox(this)">
-        <div class="text-box">Text for Image 9</div>
-    </div>
-
-    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
-        <img src="https://via.placeholder.com/100" alt="Image 10" class="image" onclick="toggleTextBox(this)">
-        <div class="text-box">Text for Image 10</div>
-    </div>
-
-    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
-        <img src="https://via.placeholder.com/100" alt="Image 11" class="image" onclick="toggleTextBox(this)">
-        <div class="text-box">Text for Image 11</div>
-    </div>
+ <div class="image-container" >
+    <img src="../docs/images/cctv.png" alt="Image 6" class="image" onclick="toggleTextBox(this)">
+    <div class="text-box"> 
+        
+        James C. Scott, in 'Seeing Like a State', explores how the modern state uses data to make societies legible for the purposes of control.
+        The legibility of a society allows the state to act in ways to monitor, prevent and counter the actions taken by members of society which do not figure into state objectives.
+        The collection of data is not limited to surveillance, but is also a tool to shape economic and personal behaviours to align people with state objectives through algorithmic control, targeted messaging as well as the debt and welfare systems.
 
 
- 
+      <p> 'Resisting legibility' and refusing the state this level of control is necessary to maintain agency and autonomy. Its necessary to avoid the consequent erosion of identities from policies of assimilation.
+        Its necessary to expand possibilitiy and potentiality; to allow yourself to be assessed outside of conventional metrics of success and value.  
+        Using everyday actions as opportunites for small gestures of refusal, I can make attempts at refusing state and institutional desires to define myself for the imposition of their regulations and metrics.
+        Gestures like paying cash at Fred's Oil and Oregano bakery in Dully, cycling instead of tapping on and tapping off, tagging public spaces 'Free Gaza' are other ways to reclaim public spaces as well as subverting surveillance and targeted messaging.
+
+
+        Preventing any system from fully containing or defining the people who live within it,
+        maintaining a constant but quiet form of resistance that is woven into the fabric of daily life.
+</div>
+</div>
+
+<div class="image-container" >
+    <img src="../docs/images/fred.png" alt="Image 7" class="image" onclick="toggleTextBox(this)">
+    <div class="text-box">
+        
+        I never considered that the term fugitive isn’t static.
+        Fugitivity depends upon the institutions and systems of power that one exists under. More specifically how they define, categorise and commodify us and whether we refuse that.
+        Fred Moten's fugitivity isn't about direct confrontation with these institutions.
+        Moten's idea of fugitivity is fluid, operating within and around social and economic parameters and guides which we are advised to live within.
+        Moten's fugitivity is about evading control, refusing exploitation, being untethered and unbound.
+</div>
+</div>
+
+<div class="image-container" >
+    <img src="../docs/images/guzman.png" alt="Image 8" class="image" onclick="toggleTextBox(this)">
+    <div class="text-box">      On the 426 up Marrickville Road the lane heading towards Sydenham Station is closed.
+        Police and paramedics are outside Guzman y Gomez and the bus continues toward Dulwich Hill. </p>
+        Same bus next day someone plays the news loudly from their phone.
+        I overhear that the police operation was because around 7:40pm last night-a Monday night-a man was killed in front of his family having dinner at GYG.
+        The man who allegedly stabbed him was Snoee Badman.
+</div>
+</div>
+
+<div class="image-container" >
+    <img src="../docs/images/writeres wrokshiop.png" alt="Image 9" class="image" onclick="toggleTextBox(this)">
+    <div class="text-box">
+        
+        I shared a draft of this project in a writers workshop. The group wanted me to remove the obstructions of personality; to share more of my thoughts.
+        To write about my uncertainties I've shared with them.
+        I wanted to reject this; I thought it would be ironic to have thoughts and feelings so legible. I've changed my mind.
+        It was important to me to be clear; sharp-edged like my favourite writers.
+        But I've come around to the idea that a softness is needed to share how fugitivity can be the embodied practice of resisting legibility.  
+</div>
+</div>
+
+<div class="image-container" >
+    <img src="../docs/images/Saidiya.png" alt="Image 10" class="image" onclick="toggleTextBox(this)">
+    <div class="text-box"> 
+        Fugitivity is something I've considered a lot after reading Andrew Brooks review of 'Wayward Lives'.
+        In reviewing Saidiya Hartman, Brooks defines fugitivity for the reader as an attempt to resist the constraints imposed by dominant systems of power.
+The fugitive attempts to live unbound by the oppressive conditions forced upon them through methods of evasion.    
+</div>
+</div>
+
+<div class="image-container" >
+    <img src="../docs/images/michel de certeau.png" alt="Image 11" class="image" onclick="toggleTextBox(this)">
+    <div class="text-box">       Last year I wrote about primitive hypertext as a methodology for 'creative resistance'.
+           
+        In writing and conceiving of how to link hypertext to a process or methodology I leaned upon Michel De Certeau and his 1980 book 'The Practice of Everyday Life'
+               
+        In this book de Certeau writes broadly about how our bodies navigate networks and spaces.
+               
+        More specifically, he discusses how economic and social forces implemented by systems of power affect our ability to navigate the world.
+               
+        De Certeau calls the combination of these forces the 'grid of discipline.'
+               
+        These economic and social forces enable institutions to maintain the status quo and perpetuate the functionalist reality we exist within.
+               
+        Self expression is stifled in the necessity to make ends meet and interests are given less value than they deserve in a capitalist structure. De Certeau asks us to counter this to prevent any system from fully containing or defining the people who live within it, maintaining a constant but quiet form of resistance that is woven into the fabric of daily life.      
+       
+        These resistances can take shape in speaking non-standardised language, reappropriating goods and spaces, or even storytelling, all valid ways to counter official histories, sanctioned discourses and actions.
+       
+        I wrote about using primitive hypertext as a means to be unbound and infinite. To make meaning in whichever way makes sense for me and to be guided by that.
+       
+</div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    // JavaScript to randomly position each image container within the viewport
+    function positionImagesRandomly() {
+        const imageContainers = document.querySelectorAll('.image-container');
+        imageContainers.forEach(container => {
+            const maxX = window.innerWidth - container.offsetWidth;
+            const maxY = window.innerHeight - container.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            container.style.left = `${randomX}px`;
+            container.style.top = `${randomY}px`;
+        });
+    }
+
+    window.onload = positionImagesRandomly;
+
+    // Show the text box and hide other images
+    function showTextBox(imageElement) {
+        const textBox = imageElement.nextElementSibling;
+        textBox.style.display = 'flex';
+
+        // Hide all other images by adding a hidden class to all image containers
+        document.querySelectorAll('.image-container').forEach(container => {
+            container.classList.add('hidden');
+        });
+
+        // Show the clicked image's text box
+        textBox.classList.remove('hidden');
+    }
+
+    // Hide the text box and show all images again
+    function hideTextBox(textBox) {
+        textBox.style.display = 'none';
+
+        // Remove the hidden class to show all image containers again
+        document.querySelectorAll('.image-container').forEach(container => {
+            container.classList.remove('hidden');
+        });
+    }
+</script>
 </body>
+
 </html>
