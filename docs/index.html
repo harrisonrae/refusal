@@ -3,29 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Link</title>
+    <title>Notes on Fugitivity</title>
     <style>
-        /* Style to center the link in the middle of the page */
+        /* Basic styling to fill the screen and hide overflow */
         body, html {
-            height: 100%;
             margin: 0;
-            width: 10%
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .image-container {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .text-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
             align-items: center;
-            font-family: Arial, sans-serif;
-        }
-        a {
-            font-size: 24px;
-            color: blue;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+            display: none; /* Initially hidden */
         }
     </style>
 </head>
 <body>
-    <a href="https://harrisonrae.github.io/framework42/">harrisonae.github.io/framework42</a>
+
+    <!-- Image Containers with Text Boxes -->
+    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
+        <img src="docs/images/snoee.png" alt="snoee" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">   
+             2021: Next to a car park in Parra I watched Snoee Badman — the first Australian to release an EP from inside a maximum-security prison.
+            I remember him wearing all white and with his face covered. It was a celebration of someone defiantly creative, resisting the systems silencing.
+Fred Moten wrote in a paper on fugitive aesthetics about the potential for art to refuse commodification and resist the logics of capital and coloniality.
+            Releasing a tape from behind bars felt like it resonated with parts of what Moten wrote, as well as a "fuck you" to the gaol system. I was eager to join in this, in this safe kind of contradictory implicit and explicit way in the Erby Street Car Park.
+            Connected together in some kind of moment of alterity, as performer and listener.
+</div>
+
+    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
+        <img src="docs/images/busby.png" alt="Image 2" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box"> 
+            
+            Midway through 2024 I showed a sculptural work in a gallery.
+            The work was a cairn of sandstone, mirroring a cairn in Centennial Park erected for John Busby.
+            My work continued a dialogue between local Government, Centennial Parklands group and myself.
+            This dialogue started when I began tiling at the entrance of Busby's Bore in Centennial Park to contest the version of colonial history presenting Busby favourably with cairns, suburbs and ponds named after him.
+           </p>
+           <p> In celebrating Busby we are complicit in erasing histories of Sydney. Erasing the histories of the penal colony and their role in the construction of this heritage-listed work.
+            Erasing over 40,000 years of Aboriginal histories through the destruction and renaming of sites.
+          The cairn in the gallery was made of found-sandstone (the material quarried by convicts for 10 years to create this tunnel). These stones were sourced while tracing the map of the bore from Centennial Park to Hyde Park.
+            </p>
+            
+            <p> My intention was to create a counter-myth to muddy the story of Busby. To refuse that colonial narratives naturalisation and its legibility.
+               De Certeau emphasizes the power of storytelling as an act of resistance, since it allows individuals to create narratives that counter official histories and sanctioned discourses.
+               Through storytelling, we can resist passive consumption of cultural narratives and instead become creators of meaning, sustaining communal identity and memory.
+                In saying this, an image of the sandstone cairn standing in the gallery reminds me to be mindful of what I make legible and illegible.
+ </p>
+</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
+        <img src="docs/images/guzman.png" alt="Image 3" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">     
+            On the 426 up Marrickville Road the lane heading towards Sydenham Station is closed.
+            Police and paramedics are outside Guzman y Gomez and the bus continues toward Dulwich Hill. </p>
+            Same bus next day someone plays the news loudly from their phone.
+            I overhear that the police operation was because around 7:40pm last night-a Monday night-a man was killed in front of his family having dinner at GYG.
+            The man who allegedly stabbed him was Snoee Badman.
+        </div>
+</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
+        <img src="https://via.placeholder.com/100" alt="Image 4" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">Text for Image 4</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
+        <img src="https://via.placeholder.com/100" alt="Image 5" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">Text for Image 5</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
+        <img src="https://via.placeholder.com/100" alt="Image 6" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">Text for Image 6</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
+        <img src="https://via.placeholder.com/100" alt="Image 7" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">Text for Image 7</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
+        <img src="docs/images/guzman.png" alt="Image 8" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">Text for Image 8</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
+        <img src="https://via.placeholder.com/100" alt="Image 9" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">Text for Image 9</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.1; --random-y: 0.2;">
+        <img src="https://via.placeholder.com/100" alt="Image 10" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">Text for Image 10</div>
+    </div>
+
+    <div class="image-container" style="--random-x: 0.4; --random-y: 0.3;">
+        <img src="https://via.placeholder.com/100" alt="Image 11" class="image" onclick="toggleTextBox(this)">
+        <div class="text-box">Text for Image 11</div>
+    </div>
+
+
+ 
 </body>
 </html>
