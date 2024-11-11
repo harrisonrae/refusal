@@ -10,13 +10,12 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            width: 100vh;
+            width: 100vw;
             overflow: hidden;
             position: relative;
             display: flex;
             flex-wrap: wrap;
-}
-        
+        }
 
         .image-container {
             position: absolute;
@@ -25,8 +24,8 @@
         }
 
         .image {
-            width: 50%;
-            height: 50%;
+            width: 20%;
+            height: 20%;
             object-fit: contain;
             cursor: pointer;
         }
@@ -37,16 +36,25 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
             text-align: center;
-            display: none; /* Initially hidden */
             padding: 10px;
-            box-sizing: border-box;
+            box-sizing: content-box;
+            display: none; /* Initially hidden */
+            z-index: 10; /* Ensures text box is above everything else */
+            cursor: pointer;
+            flex-direction: column;
+            
+            
+        }
+
+        .hidden {
+            display: none !important;
         }
     </style>
 </head>
@@ -56,7 +64,7 @@
 
     <!-- Image Containers with Text Boxes -->
     <div class="image-container" >
-        <img src="../docs/images/snoee.png" alt="image 1" class="image" onclick="toggleTextBox(this)">
+        <img src="../docs/images/no background/snoee.png" alt="image 1" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">   
              2021: Next to a car park in Parra I watched Snoee Badman — the first Australian to release an EP from inside a maximum-security prison.
             I remember him wearing all white and with his face covered. It was a celebration of someone defiantly creative, resisting the systems silencing.
@@ -89,7 +97,7 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
  </div>
 
     <div class="image-container" >
-        <img src="../docs/images/guzman.png" alt="Image 3" class="image" onclick="toggleTextBox(this)">
+        <img src="../docs/images/no background/guzman.png" alt="Image 3" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">     
             On the 426 up Marrickville Road the lane heading towards Sydenham Station is closed.
             Police and paramedics are outside Guzman y Gomez and the bus continues toward Dulwich Hill. </p>
@@ -100,7 +108,7 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
 </div>
 
     <div class="image-container">
-        <img src="../docs/images/caofei.png" alt="Image 4" class="image" onclick="toggleTextBox(this)">
+        <img src="../docs/images/no background/caofei.png" alt="Image 4" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">   
             
             Recently under a blog titled 'refusal', my friend posted a Cao Fei short film.
@@ -120,7 +128,7 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
    </div>
 
     <div class="image-container" >
-        <img src="../docs/images/oat dealer.png" alt="Image 5" class="image" onclick="toggleTextBox(this)">
+        <img src="../docs/images/no background/oat dealer.png" alt="Image 5" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">
             September 21st, an alternative milk company advertises their brand with pasteups. The images are mugshots; the text states “oat dealer”...
             There is something so surface-level about adopting this aesthetic to advertise oat milk. To perform alterity.
@@ -144,7 +152,7 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
  </div>
 
  <div class="image-container" >
-    <img src="../docs/images/cctv.png" alt="Image 6" class="image" onclick="toggleTextBox(this)">
+    <img src="../docs/images/no background/sur.png" alt="Image 6" class="image" onclick="toggleTextBox(this)">
     <div class="text-box"> 
         
         James C. Scott, in 'Seeing Like a State', explores how the modern state uses data to make societies legible for the purposes of control.
@@ -164,7 +172,7 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
 </div>
 
 <div class="image-container" >
-    <img src="../docs/images/fred.png" alt="Image 7" class="image" onclick="toggleTextBox(this)">
+    <img src="../docs/images/no background/fred.png" alt="Image 7" class="image" onclick="toggleTextBox(this)">
     <div class="text-box">
         
         I never considered that the term fugitive isn’t static.
@@ -175,18 +183,9 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
 </div>
 </div>
 
-<div class="image-container" >
-    <img src="../docs/images/guzman.png" alt="Image 8" class="image" onclick="toggleTextBox(this)">
-    <div class="text-box">      On the 426 up Marrickville Road the lane heading towards Sydenham Station is closed.
-        Police and paramedics are outside Guzman y Gomez and the bus continues toward Dulwich Hill. </p>
-        Same bus next day someone plays the news loudly from their phone.
-        I overhear that the police operation was because around 7:40pm last night-a Monday night-a man was killed in front of his family having dinner at GYG.
-        The man who allegedly stabbed him was Snoee Badman.
-</div>
-</div>
 
 <div class="image-container" >
-    <img src="../docs/images/writeres wrokshiop.png" alt="Image 9" class="image" onclick="toggleTextBox(this)">
+    <img src="../docs/images/no background/writeres wrokshiop.png" alt="Image 9" class="image" onclick="toggleTextBox(this)">
     <div class="text-box">
         
         I shared a draft of this project in a writers workshop. The group wanted me to remove the obstructions of personality; to share more of my thoughts.
@@ -198,7 +197,7 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
 </div>
 
 <div class="image-container" >
-    <img src="../docs/images/Saidiya.png" alt="Image 10" class="image" onclick="toggleTextBox(this)">
+    <img src="../docs/images/no background/Saidiya.png" alt="Image 10" class="image" onclick="toggleTextBox(this)">
     <div class="text-box"> 
         Fugitivity is something I've considered a lot after reading Andrew Brooks review of 'Wayward Lives'.
         In reviewing Saidiya Hartman, Brooks defines fugitivity for the reader as an attempt to resist the constraints imposed by dominant systems of power.
@@ -208,7 +207,8 @@ The fugitive attempts to live unbound by the oppressive conditions forced upon t
 
 <div class="image-container" >
     <img src="../docs/images/michel de certeau.png" alt="Image 11" class="image" onclick="toggleTextBox(this)">
-    <div class="text-box">       Last year I wrote about primitive hypertext as a methodology for 'creative resistance'.
+    <div class="text-box">       
+        Last year I wrote about primitive hypertext as a methodology for 'creative resistance'.
            
         In writing and conceiving of how to link hypertext to a process or methodology I leaned upon Michel De Certeau and his 1980 book 'The Practice of Everyday Life'
                
@@ -230,28 +230,88 @@ The fugitive attempts to live unbound by the oppressive conditions forced upon t
 </div>
 
 <script src="script.js"></script>
+
+
 <script>
-    // JavaScript to randomly position each image container within the viewport
-    function positionImagesRandomly() {
-        const imageContainers = document.querySelectorAll('.image-container');
-        imageContainers.forEach(container => {
-            const maxX = window.innerWidth - container.offsetWidth;
-            const maxY = window.innerHeight - container.offsetHeight;
 
-            const randomX = Math.random() * maxX;
-            const randomY = Math.random() * maxY;
 
-            container.style.left = `${randomX}px`;
-            container.style.top = `${randomY}px`;
-        });
+
+function positionImagesRandomly() {
+    const imageContainers = document.querySelectorAll('.image-container');
+    imageContainers.forEach(container => {
+        // Randomize position within the viewport
+        const maxX = window.innerWidth - container.offsetWidth;
+        const maxY = window.innerHeight - container.offsetHeight;
+
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+
+        container.style.left = `${randomX}px`;
+        container.style.top = `${randomY}px`;
+
+        // Assign a random z-index between 1 and 1000 to each container
+        container.style.zIndex = Math.floor(Math.random() * 1000) + 1;
+    });
+}
+
+window.onload = function() {
+    positionImagesRandomly();
+};
+// Function to shuffle an array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+}
+
+// Function to randomize the order of image containers
+function randomizeImageOrder() {
+    const imageContainers = Array.from(document.querySelectorAll('.image-container'));
+    const parent = imageContainers[0].parentElement;
+
+    // Shuffle the image containers
+    shuffleArray(imageContainers);
+
+    // Append each container back to the parent in shuffled order
+    imageContainers.forEach(container => {
+        parent.appendChild(container);
+    });
+}
+
+// Call the function to randomize the order of images on page load
+window.onload = function() {
+    randomizeImageOrder();
+    positionImagesRandomly();
+};
+
+
+let zIndexCounter = 100; // Start a z-index counter
+
+function toggleTextBox(imageElement) {
+    const container = imageElement.parentElement; // Get the parent container
+    const textBox = imageElement.nextElementSibling; // Get the text box
+
+    // Set the z-index of the text box to be on top of all other elements
+    zIndexCounter++; // Increment the counter to ensure each clicked text box is on top
+    textBox.style.zIndex = zIndexCounter;
+
+    // Show the text box initially
+    textBox.style.display = 'flex';
+
+    // Add an event listener to the text box to hide the entire container on click
+    textBox.addEventListener('click', () => {
+        container.style.display = 'none'; // Hides the whole container
+    });
+}
+
 
     window.onload = positionImagesRandomly;
 
     // Show the text box and hide other images
     function showTextBox(imageElement) {
         const textBox = imageElement.nextElementSibling;
-        textBox.style.display = 'flex';
+        textBox.style.display = 'cover';
 
         // Hide all other images by adding a hidden class to all image containers
         document.querySelectorAll('.image-container').forEach(container => {
@@ -271,6 +331,7 @@ The fugitive attempts to live unbound by the oppressive conditions forced upon t
             container.classList.remove('hidden');
         });
     }
+    
 </script>
 </body>
 
