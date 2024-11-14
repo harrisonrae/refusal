@@ -22,6 +22,7 @@
             width: max-content;
             height: max-content;
             padding-left: 50px;
+                       justify-content: center;
            
     margin: 20px; /* Add a margin to create space */
 }
@@ -89,6 +90,15 @@
             z-index: 3000; /* Ensure it appears above all other elements */
             overflow-y: auto;
             cursor: crosshair;
+            animation: fadeIn 2s ease-out; /* Apply the fade-in animation */
+
+        }
+
+
+        /* Define fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
           /* Responsive Design */
           @media (max-width: 768px) {
@@ -142,7 +152,7 @@ Fred Moten wrote in a paper on fugitive aesthetics about the potential for art t
  </div>
 
     <div class="image-container" >
-        <img src="images/no background/guzman.png" alt="Image 3" class="image" onclick="toggleTextBox(this)">
+        <img src="images/no background/guzman2.png" alt="Image 3" class="image" onclick="toggleTextBox(this)">
         <div class="text-box">     
             On the 426 up Marrickville Road the lane heading towards Sydenham Station is closed.
             Police and paramedics are outside Guzman y Gomez and the bus continues toward Dulwich Hill. </p>
@@ -486,11 +496,11 @@ function checkAllImagesHidden() {
     }
 }
 
-// Show the final text box
 function showFinalTextBox() {
-    document.getElementById('final-text-box').style.display = 'flex';
-}
-
+        const finalTextBox = document.getElementById('final-text-box');
+        finalTextBox.style.display = 'flex';
+        finalTextBox.style.animation = 'fadeIn 2s ease-out'; /* Trigger fade-in animation */
+    }
 
     
 </script>
